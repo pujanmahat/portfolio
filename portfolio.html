@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    :root {
+      --primary-color: red;
+      --secondary-color: red;
+      --common-padding: 32px 16px;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    .header {
+      background-color: black;
+      padding: 10px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* justify-content: center; */
+    }
+    .nav_links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav_links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .nav h3 {
+      color: white;
+      font-size: 24px;
+      letter-spacing: 0.3px;
+    }
+    .nav h3 span {
+      color: var(--primary-color);
+    }
+    .home {
+      height: 90vh;
+      background-image: url(images/img5.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .home_contents {
+      text-align: center;
+    }
+
+    .small-heading {
+      font-size: 32px;
+      color: #cd6133;
+    }
+    .small-heading span {
+      color: var(--secondary-color);
+    }
+    .large-heading {
+      font-size: 48px;
+      color: #218c74;
+    }
+    .large-heading span {
+      color: var(--primary-color);
+    }
+    .btn {
+      padding: 8px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 12px;
+    }
+    .btn:hover {
+      color: aqua;
+      background-color: var(--primary-color);
+    }
+    /* .skills {
+      display: flex;
+    } */
+    .about {
+      text-align: center;
+      padding: var(--common-padding);
+    }
+    .about h2,
+    h3 {
+      margin-bottom: 16px;
+    }
+    .about img {
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      /* border: 2px solid var(--primary-color); */
+      object-fit: cover;
+    }
+    .about p {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-size: 19px;
+      color: #2c2c54;
+    }
+    /* projects part  */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32x;
+      padding: var(--common-padding);
+      gap: 32px;
+    }
+   
+    .projects-each img{
+
+      width: 250px;
+      
+
+    }
+    .contact h3 {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+
+    }
+    .contact_details{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact_details p{
+      margin-top: 20px;
+      font-size: 20px;
+      color: rgba(36, 3, 73, 0.842);
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    .contact_icons{
+     display: flex;
+     justify-content: center;
+     font-size: 30px;
+     gap: 20px;
+    }
+    @media screen and (max-width:740px)
+    {
+      .nav{
+        flex-direction: column;
+      }
+      .large-heading{
+        font-size: 30px;
+      }
+    }
+  </style>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav_logo">
+          <h3>port <span>folio</span></h3>
+        </div>
+        <ul class="nav_links">
+          <li><a href="#home">HOme</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#sills">skills</a></li>
+          <li><a href="#projects">protect</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="home" id="home">
+        <div class="home_contents">
+          <h3 class="small-heading">My name is</h3>
+          <h2 class="large-heading">Pujan <span>mahat</span></h2>
+          <h3>I am a developer</h3>
+          <a href="#" class="btn">Hire me</a>
+        </div>
+      </section>
+      <section class="about"id=about>
+        <h3 class="large-heading">About <span>me</span></h3>
+        <img src="images/img6.png" alt="" />
+        <h3 class="small-heading">Developer <span>& Designer</span></h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
+          distinctio harum eveniet ad aperiam nostrum recusandae, saepe
+          voluptate perferendis tenetur provident delectus natus nesciunt vitae
+          aut ullam commodi, reprehenderit mollitia eum soluta veritatis! Quos
+          culpa, deserunt, repudiandae laborum voluptate dolore reiciendis
+          doloremque officia expedita mollitia quasi molestiae aperiam
+          dignissimos saepe.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          temporibus blanditiis fugiat natus odit quasi aspernatur. Odit nobis
+          quia eius corporis quis dicta tenetur facere iusto iste repudiandae!
+          Est facere laudantium quo unde voluptate praesentium non beatae eos
+          ipsum aspernatur aliquam cumque, illum ipsa ullam ad dignissimos qui
+          dolorem totam.
+        </p>
+        <a href="#" class="btn">Let's talk</a>
+        </section>
+        <section>
+        <hr />
+        <section class="owl-carousel owl theme" id="skills">
+          <div class="skills_each">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/12/28/08/15/hummingbird-1935665__340.png "
+              alt=""
+            />
+            <p>css</p>
+            <p>Expetrise:80%</p>
+          </div>
+          <div class="skills_each">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/12/28/08/15/hummingbird-1935665__340.png"
+              alt=""
+            />
+            <p>css</p>
+            <p>Expetrise:80%</p>
+          </div>
+          <div class="skills_each">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/12/28/08/15/hummingbird-1935665__340.png"
+              alt=""
+            />
+            <p>css</p>
+            <p>Expetrise:80%</p>
+          </div>
+          <div class="skills_each">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/12/28/08/15/hummingbird-1935665__340.png"
+              alt=""
+            />
+            <p>css</p>
+            <p>Expetrise:80%</p>
+          </div>
+          <div class="skills_each">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/12/28/08/15/hummingbird-1935665__340.png"
+              alt=""
+            />
+            <p>css</p>
+            <p>Expetrise:80%</p>
+          </div>
+        </section>
+        <!-- project section -->
+        <section class="projects" id="pronects">
+          <div class="projects-each">
+            <img src="images/img7.jpg" alt="project 1 image" />
+            <h3>project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+              dolore quaerat ea eum quisquam unde nobis architecto officiis
+              molestiae, soluta debitis ratione illo natus? Culpa at, nihil
+              rerum molestiae soluta adipisci aspernatur ab magni. A, earum!
+              Possimus, iste? Animi iure nemo, quo tenetur numquam culpa sequi
+              repellat? Facilis, necessitatibus earum.
+            </p>
+          </div>
+          <div class="projects-each">
+            <img src="images/img7.jpg" alt="project 1 image" />
+            <h3>project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+              dolore quaerat ea eum quisquam unde nobis architecto officiis
+              molestiae, soluta debitis ratione illo natus? Culpa at, nihil
+              rerum molestiae soluta adipisci aspernatur ab magni. A, earum!
+              Possimus, iste? Animi iure nemo, quo tenetur numquam culpa sequi
+              repellat? Facilis, necessitatibus earum.
+            </p>
+          </div>
+          <div class="projects-each">
+            <img src="images/img7.jpg" alt="project 1 image" />
+            <h3>project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+              dolore quaerat ea eum quisquam unde nobis architecto officiis
+              molestiae, soluta debitis ratione illo natus? Culpa at, nihil
+              rerum molestiae soluta adipisci aspernatur ab magni. A, earum!
+              Possimus, iste? Animi iure nemo, quo tenetur numquam culpa sequi
+              repellat? Facilis, necessitatibus earum.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayspeed: 200,
+        autoplayhover: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
+    <hr />
+    <section class="contact" id="contact">
+      <h3 class="large-heading">Contact <span>Me</span></h3>
+      <div class="contact_details">
+        <div>
+          <a href="mailto:rajeevbaniya11@gmail.com">
+            <i class="fa-regular fa-envelope"></i> rajeevbaniya11@gmail.com
+          </a>
+        </div>
+        <div>
+          <a href="tel:9805832174">
+            <i class="fa-solid fa-phone"></i>9805832174
+          </a>
+        </div>
+        <div>
+          <p>
+            <i class="fa-regular fa-address-book"></i> Batulechaur,
+            Pokhara-16, Nepal
+          </p>
+        </div>
+      </div>
+      <div class="contact_icons">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+    
+  </body>
+</html>
